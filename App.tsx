@@ -1,0 +1,17 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ContactsNavigator from './screens/routes';
+import OptionsScreen from './screens/Options';
+import React from 'react';
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer >
+      <Stack.Navigator initialRouteName='Lab2TH'>
+        <Stack.Screen name="Lab2TH" component={ContactsNavigator} options={{headerShown: false}} />
+        <Stack.Screen name="Options" component={OptionsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
